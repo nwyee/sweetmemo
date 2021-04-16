@@ -37,5 +37,8 @@
             </plugin>
         </plugins>
     </build>
-
+    <scm>
+        <tag>HEAD</tag>
+        <developerConnection>scm:git:git@github.com:nwyee/sweetmemo.git</developerConnection>
+    </scm>
 </project>
