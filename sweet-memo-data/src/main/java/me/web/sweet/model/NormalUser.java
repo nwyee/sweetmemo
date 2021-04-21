@@ -1,4 +1,4 @@
-package me.data.sweet.model;
+package me.web.sweet.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

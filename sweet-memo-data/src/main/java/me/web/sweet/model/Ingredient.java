@@ -1,13 +1,10 @@
-package me.data.sweet.model;
+package me.web.sweet.model;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Set;
 
 @Setter
@@ -23,6 +20,11 @@ public class Ingredient extends BaseEntity{
     @Column(name = "description", columnDefinition = "TEXT")
     private String description;
 
-    @OneToMany(mappedBy = "ingredients")
+    @OneToMany(mappedBy = "ingredient")
     Set<RecipeIngredients> recipeIngredientsSet;
+
+    @ManyToOne
+    @JoinColumn(name="recipe_id", nullable=false)
+    private Recipe recipe;
+
 }

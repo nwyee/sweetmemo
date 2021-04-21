@@ -1,4 +1,4 @@
-package me.data.sweet.model.type;
+package me.web.sweet.model.type;
 
 import java.util.HashMap;
 import java.util.Map;

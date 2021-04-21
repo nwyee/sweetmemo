@@ -1,4 +1,4 @@
-package me.data.sweet.model;
+package me.web.sweet.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -12,8 +12,8 @@ import java.util.Set;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
-@Table(name = "tags")
+//@Entity
+//@Table(name = "tags")
 public class Tag extends BaseEntity{
 
     @Column(name = "name")

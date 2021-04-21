@@ -1,14 +1,12 @@
-package me.data.sweet.model;
+package me.web.sweet.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Setter
 @Getter
@@ -35,4 +33,16 @@ public class User extends BaseEntity{
     @Column(name = "telephone")
     private String telephone;
 
+
+    public User(Long id, LocalDateTime registeredAt, String name, String email, String password, LocalDate birthDate, String address, String city, String country, String telephone) {
+        super(id, registeredAt);
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.birthDate = birthDate;
+        this.address = address;
+        this.city = city;
+        this.country = country;
+        this.telephone = telephone;
+    }
 }

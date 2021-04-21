@@ -1,11 +1,11 @@
-package me.data.sweet.model;
+package me.web.sweet.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import me.data.sweet.model.type.Audience;
-import me.data.sweet.model.type.Duration;
+import me.web.sweet.model.type.Audience;
+import me.web.sweet.model.type.Duration;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -42,10 +42,10 @@ public class Recipe extends BaseEntity{
     @JoinColumn(name = "category_id")
     private Category category;
 
-    @ManyToMany(mappedBy = "recipe_tags")
-    Set<Tag> tagSet;
+//    @ManyToMany(mappedBy = "recipe_tags")
+//    Set<Tag> tagSet;
 
-    @OneToMany(mappedBy = "recipes")
+    @OneToMany(mappedBy = "recipe")
     Set<Ingredient> ingredientSet;
 
 }
